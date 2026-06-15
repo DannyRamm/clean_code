@@ -1,6 +1,7 @@
 (() => {
 
     // función para obtener información de una película por Id
+    //nombre relacionado de las funciones con lo que hacen.
     function getMovieById( id: string ) {
         console.log({ id });
     }
@@ -41,5 +42,22 @@
         return true;        
 
     }
+
+    // menos de 20 lineas tiene que tener una funcion.
+    const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }): number => {
+
+
+        if ( isDead ) return 1500;
+        if ( isSeparated ) return 2500;
+        return isRetired ? 3000: 4000;
+        
+        /*if ( isRetired ) {
+            return 3000;
+        } else {
+            return 4000; 
+        }*/
+
+    }
+
 
 })();
