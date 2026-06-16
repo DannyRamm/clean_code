@@ -18,9 +18,9 @@
             // Realiza una petición para salvar en base de datos 
             console.log('Guardando en base de datos', product );
         }
-        notifyClients() {
+        /*notifyClients() {
             console.log('Enviando correo a los clientes');
-        }
+        }*/
     
         /*onAddToCart( productId: number ) {
             // Agregar al carrito de compras
@@ -36,13 +36,20 @@
         }
     }
 
+    class NotifyBloc{
+        notifyClients() {
+            console.log('Enviando correo a los clientes');
+        } 
+    }
+
 
     const productBloc = new ProductBloc();
     const cartBloc = new CartBloc();
+    const notifyBloc = new NotifyBloc();
 
     productBloc.loadProduct(10);
     productBloc.saveProduct({ id: 10, name: 'OLED TV' });
-    productBloc.notifyClients();
+    notifyBloc.notifyClients();
     cartBloc.addToCart(10);
 
 
